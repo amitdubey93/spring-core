@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+ 	http://www.springframework.org/schema/util/spring-util.xsd
+	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config/>
+	<!-- Bean LifeCycle -->
+	<bean name="lifeone" class="com.springcore.lifecycle.LifeOne"
+		init-method="suru" destroy-method="khatam">
+		<property name="value" value="life1" />
+	</bean>
+
+	<bean name="lifetwo" class="com.springcore.lifecycle.LifeTwo">
+		<property name="value" value="life2" />
+	</bean>
+	
+	<bean name="lifethree" class="com.springcore.lifecycle.LifeThree">
+		<property name="value" value="life3" />
+	</bean>
+</beans>

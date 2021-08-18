@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<bean name="student" class="com.springcore.auto.wire.Student">
+		<!-- collaborators and configuration for this bean go here -->
+		<property name="name">
+			<value>Amit</value>
+		</property>
+		<property name="age">
+			<value>21</value>
+		</property>
+		<!-- <property name="address" ref="address" /> -->
+	</bean>
+
+	<bean name="address2" class="com.springcore.auto.wire.Address">
+		<property name="city" value="Gurugram" />
+		<property name="state" value="Haryana" />
+	</bean>
+	<bean name="address3" class="com.springcore.auto.wire.Address">
+		<property name="city" value="howrah" />
+		<property name="state" value="wb" />
+	</bean>
+</beans>
